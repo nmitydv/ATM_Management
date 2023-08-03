@@ -27,6 +27,7 @@ public class Second extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -69,6 +70,11 @@ public class Second extends javax.swing.JDialog {
         ministatement.setIcon(new javax.swing.ImageIcon(
                 "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\ministatement.png")); // NOI18N
         ministatement.setBorder(null);
+        ministatement.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ministatementActionPerformed(evt);
+            }
+        });
         getContentPane().add(ministatement, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 460, 280, 210));
 
         fastcash.setIcon(new javax.swing.ImageIcon(
@@ -142,6 +148,11 @@ public class Second extends javax.swing.JDialog {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void ministatementActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ministatementActionPerformed
+        new MiniStatement();
+        dispose();
+    }// GEN-LAST:event_ministatementActionPerformed
 
     private void pinchangeActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_pinchangeActionPerformed
         new changePin();
