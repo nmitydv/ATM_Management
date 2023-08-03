@@ -184,7 +184,8 @@ public class fourthfast extends javax.swing.JDialog {
     }// GEN-LAST:event_cancelActionPerformed
 
     private void ConfirmActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ConfirmActionPerformed
-        // TODO add your handling code here:
+        new Thankyou();
+        dispose();
     }// GEN-LAST:event_ConfirmActionPerformed
 
     private void backActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_backActionPerformed
