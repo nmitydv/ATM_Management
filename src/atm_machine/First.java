@@ -26,71 +26,55 @@ public class First extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel1 = new javax.swing.JLabel();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
-        pin = new javax.swing.JTextField();
-        accountnumber = new javax.swing.JTextField();
         more = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
-        jLabel6 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverup.png"))); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 90, 730, 121));
-
-        jLabel4.setFont(new java.awt.Font("Segoe UI Semilight", 2, 60)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setText("WELCOME");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 260, 290, 50));
-
-        jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel5.setText("ENTER YOUR FOUR DIGIN PIN");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 540, 370, -1));
-        getContentPane().add(pin, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 600, 180, 41));
-        getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 470, 320, 41));
-
-        more.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\More.png")); // NOI18N
+        more.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\More.png")); // NOI18N
         more.setBorder(null);
         more.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 moreActionPerformed(evt);
             }
         });
-        getContentPane().add(more, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 770, 160, 30));
+        getContentPane().add(more, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 760, 160, 30));
 
-        cancel.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\cancel.png")); // NOI18N
+        cancel.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\cancel.png")); // NOI18N
         cancel.setBorder(null);
         cancel.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 cancelActionPerformed(evt);
             }
         });
-        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, 160, 30));
+        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 760, 140, 40));
 
-        jLabel6.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
-        jLabel6.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel6.setText("ENTER YOUR ACCOUNT NUMBER ");
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 400, 410, 50));
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Logo.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 230, 540, -1));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\firstt.png")); // NOI18N
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 820));
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\welcome-removebg-preview.png")); // NOI18N
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 130, -1, -1));
+
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverfourth.jpg")); // NOI18N
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 680, 590));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\firstt.png")); // NOI18N
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 810));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
     private void moreActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_moreActionPerformed
-        Second s = new Second();
+        new Checking();
         dispose();
     }// GEN-LAST:event_moreActionPerformed
 
@@ -146,14 +130,11 @@ public class First extends javax.swing.JDialog {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JTextField accountnumber;
     private javax.swing.JButton cancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
-    private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
     private javax.swing.JButton more;
-    private javax.swing.JTextField pin;
     // End of variables declaration//GEN-END:variables
 }
