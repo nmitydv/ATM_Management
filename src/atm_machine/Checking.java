@@ -4,6 +4,10 @@
  */
 package atm_machine;
 
+import java.sql.*;
+import java.sql.DriverManager;
+import javax.swing.*;
+
 /**
  *
  * @author 91975
@@ -27,6 +31,7 @@ public class Checking extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -46,6 +51,12 @@ public class Checking extends javax.swing.JDialog {
         jLabel6.setForeground(new java.awt.Color(255, 255, 255));
         jLabel6.setText("ENTER YOUR ACCOUNT NUMBER ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 410, 50));
+
+        accountnumber.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                accountnumberActionPerformed(evt);
+            }
+        });
         getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 320, 41));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
@@ -80,14 +91,45 @@ public class Checking extends javax.swing.JDialog {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
+    private void accountnumberActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_accountnumberActionPerformed
+
+    }// GEN-LAST:event_accountnumberActionPerformed
+
     private void cancel2ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cancel2ActionPerformed
         System.exit(0);
     }// GEN-LAST:event_cancel2ActionPerformed
 
     private void More3ActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_More3ActionPerformed
-        new Second();
-        dispose();
-    }// GEN-LAST:event_More3ActionPerformed
+        if (accountnumber.getText().length() <= 0 || pin.getText().length() <= 0) {
+            JOptionPane.showMessageDialog(null, " Enter Valid Information");
+        } else {
+
+            try {
+                Class.forName("com.mysql.cj.jdbc.Driver");
+                Connection con = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/atm", "root",
+                        "2412");
+                Statement stm = con.createStatement();
+                String query2 = "Select * from card where card_no = '" + accountnumber.getText() + "' and card_pin = '"
+                        + pin.getText()
+                        + "'";
+                ResultSet rs = stm.executeQuery(query2);
+                if (rs.next()) {
+
+                    JOptionPane.showMessageDialog(null, " LOGIN SUCCESSFULLY");
+                    new Second();
+                    dispose();
+                } else {
+                    JOptionPane.showMessageDialog(null, " Account_number and PIN is WRONG !!");
+                    accountnumber.setText(null);
+                    pin.setText(null);
+                }
+                con.close();
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e, null, 0);
+            }
+        }
+    }
 
     /**
      * @param args the command line arguments
