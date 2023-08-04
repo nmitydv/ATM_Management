@@ -4,6 +4,13 @@
  */
 package atm_machine;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+
 /**
  *
  * @author 91975

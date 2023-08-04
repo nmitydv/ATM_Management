@@ -5,7 +5,7 @@
 package atm_machine;
 
 import java.sql.*;
-import java.sql.DriverManager;
+
 import javax.swing.*;
 
 /**
@@ -32,6 +32,9 @@ public class Checking extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
     // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
@@ -42,7 +45,8 @@ public class Checking extends javax.swing.JDialog {
         jLabel3 = new javax.swing.JLabel();
         cancel2 = new javax.swing.JButton();
         More3 = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        customerid = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
@@ -52,18 +56,21 @@ public class Checking extends javax.swing.JDialog {
         jLabel6.setText("ENTER YOUR ACCOUNT NUMBER ");
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 40, 410, 50));
 
+        accountnumber.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
         accountnumber.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 accountnumberActionPerformed(evt);
             }
         });
-        getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 90, 320, 41));
+        getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 100, 320, 50));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 25)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(255, 255, 255));
         jLabel5.setText("ENTER YOUR FOUR DIGIN PIN");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 170, 370, -1));
-        getContentPane().add(pin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 210, 180, 41));
+
+        pin.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
+        getContentPane().add(pin, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 220, 180, 50));
         getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 200, -1, -1));
 
         cancel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/cancel.png"))); // NOI18N
@@ -84,9 +91,12 @@ public class Checking extends javax.swing.JDialog {
         });
         getContentPane().add(More3, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 310, 180, 70));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverfourth.jpg"))); // NOI18N
-        jLabel1.setText("jLabel1");
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 450));
+        customerid.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverfourth.jpg"))); // NOI18N
+        customerid.setText("jLabel1");
+        getContentPane().add(customerid, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 670, 450));
+
+        jTextField1.setText("jTextField1");
+        getContentPane().add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, -1, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -115,7 +125,7 @@ public class Checking extends javax.swing.JDialog {
                         + "'";
                 ResultSet rs = stm.executeQuery(query2);
                 if (rs.next()) {
-
+                    customerid.setText(rs.getString(4));
                     JOptionPane.showMessageDialog(null, " LOGIN SUCCESSFULLY");
                     new Second();
                     dispose();
@@ -182,10 +192,11 @@ public class Checking extends javax.swing.JDialog {
     private javax.swing.JButton More3;
     private javax.swing.JTextField accountnumber;
     private javax.swing.JButton cancel2;
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel customerid;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField pin;
     // End of variables declaration//GEN-END:variables
 }
