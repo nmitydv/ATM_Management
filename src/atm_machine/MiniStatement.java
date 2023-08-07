@@ -4,6 +4,14 @@
  */
 package atm_machine;
 
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+
 /**
  *
  * @author 91975
@@ -26,7 +34,10 @@ public class MiniStatement extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         jLabel5 = new javax.swing.JLabel();
@@ -46,33 +57,54 @@ public class MiniStatement extends javax.swing.JDialog {
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(116, 30, 259, -1));
 
         Table.setModel(new javax.swing.table.DefaultTableModel(
-            new Object [][] {
+                new Object[][] {
 
-            },
-            new String [] {
-                "Amount", "Type of Transaction", "Time"
-            }
-        ) {
-            Class[] types = new Class [] {
-                java.lang.Double.class, java.lang.String.class, java.lang.String.class
+                },
+                new String[] {
+                        "Amount", "Type of Transaction", "Time"
+                }) {
+            Class[] types = new Class[] {
+                    java.lang.String.class, java.lang.String.class, java.lang.String.class
             };
-            boolean[] canEdit = new boolean [] {
-                false, false, false
+            boolean[] canEdit = new boolean[] {
+                    false, false, false
             };
 
             public Class getColumnClass(int columnIndex) {
-                return types [columnIndex];
+                return types[columnIndex];
             }
 
             public boolean isCellEditable(int rowIndex, int columnIndex) {
-                return canEdit [columnIndex];
+                return canEdit[columnIndex];
             }
         });
         jScrollPane1.setViewportView(Table);
 
+        try {
+            Class.forName("com.mysql.cj.jdbc.Driver");
+            Connection con = DriverManager.getConnection(
+                    "jdbc:mysql://localhost:3306/atm", "root",
+                    "2412");
+            String query2 = "Select T_amount, T_type, timee from transaction_record";
+            PreparedStatement pst = con.prepareStatement(query2);
+            ResultSet r = pst.executeQuery(query2);
+            while (r.next()) {
+                String T_amount = r.getString(1);
+                String T_type = r.getString(2);
+                String timee = r.getString(3);
+                String tb[] = { T_amount, T_type, timee
+                };
+                DefaultTableModel tbm = (DefaultTableModel) Table.getModel();
+                tbm.addRow(tb);
+
+            }
+        } catch (Exception e) {
+            JOptionPane.showMessageDialog(null, e, null, 0);
+        }
         getContentPane().add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(-6, 118, 500, 414));
 
-        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
+        back.setIcon(
+                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
         back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -92,11 +124,13 @@ public class MiniStatement extends javax.swing.JDialog {
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 590, 180, 60));
 
         jLabel1.setBackground(new java.awt.Color(0, 0, 0));
-        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverfourth.jpg")); // NOI18N
+        jLabel1.setIcon(new javax.swing.ImageIcon(
+                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverfourth.jpg")); // NOI18N
         jLabel1.setText("jLabel1");
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 532, 500, 130));
 
-        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverup.png")); // NOI18N
+        jLabel2.setIcon(new javax.swing.ImageIcon(
+                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverup.png")); // NOI18N
         jLabel2.setText("jLabel1");
         getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 500, 120));
 
