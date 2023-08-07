@@ -26,12 +26,9 @@ public class FundTransfer extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        name = new javax.swing.JTextField();
-        balance = new javax.swing.JTextField();
-        lasttransaction = new javax.swing.JTextField();
         cancel = new javax.swing.JButton();
         Confirm = new javax.swing.JButton();
         back = new javax.swing.JButton();
@@ -39,36 +36,14 @@ public class FundTransfer extends javax.swing.JDialog {
         jLabel2 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
-        jLabel6 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        name.setBackground(new java.awt.Color(0, 0, 0));
-        name.setForeground(new java.awt.Color(255, 255, 255));
-        name.setBorder(null);
-        name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameActionPerformed(evt);
-            }
-        });
-        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 180, 40));
-
-        balance.setBackground(new java.awt.Color(0, 0, 0));
-        balance.setForeground(new java.awt.Color(255, 255, 255));
-        balance.setBorder(null);
-        balance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                balanceActionPerformed(evt);
-            }
-        });
-        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 168, 40));
-
-        lasttransaction.setBackground(new java.awt.Color(0, 0, 0));
-        lasttransaction.setForeground(new java.awt.Color(255, 255, 255));
-        lasttransaction.setBorder(null);
-        getContentPane().add(lasttransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 168, 40));
 
         cancel.setBackground(new java.awt.Color(0, 0, 0));
         cancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/cancel.png"))); // NOI18N
@@ -78,27 +53,25 @@ public class FundTransfer extends javax.swing.JDialog {
                 cancelActionPerformed(evt);
             }
         });
-        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, 180, 40));
+        getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 780, 140, 30));
 
-        Confirm.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
+        Confirm.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
         Confirm.setBorder(null);
         Confirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 ConfirmActionPerformed(evt);
             }
         });
-        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 620, 150, 40));
+        getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 580, -1, -1));
 
-        back.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
         back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 770, 140, 32));
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1020, 710, 140, 40));
 
         accountnumber.setFont(new java.awt.Font("Segoe UI", 0, 25)); // NOI18N
         accountnumber.addActionListener(new java.awt.event.ActionListener() {
@@ -106,31 +79,44 @@ public class FundTransfer extends javax.swing.JDialog {
                 accountnumberActionPerformed(evt);
             }
         });
-        getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 420, 390, 50));
+        getContentPane().add(accountnumber, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 430, 390, 50));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
         jLabel2.setText("ENTER ACCOUNT NUMBER ");
-        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 330, 310, 50));
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 340, 310, 50));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI Semibold", 0, 13)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setText("!! NOTE  - The account number entered should be belong to branch");
-        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 280, 430, 50));
+        getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(380, 280, 430, 50));
 
         jLabel5.setFont(new java.awt.Font("Segoe UI Semibold", 0, 44)); // NOI18N
         jLabel5.setForeground(new java.awt.Color(0, 0, 153));
         jLabel5.setText("FUND Transfer");
-        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 310, -1));
+        getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(450, 160, 310, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
-        jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 670, 480));
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel7.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(280, 110, 680, 580));
 
-        jLabel3.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Third.png")); // NOI18N
-        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 830));
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 210, 650));
+
+        jLabel10.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel10.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel10.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(530, 30, 660, 660));
+
+        jLabel11.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel11.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel11.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(200, 20, 750, 810));
+
+        jLabel1.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Dashboard.png")); // NOI18N
+        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -215,14 +201,14 @@ public class FundTransfer extends javax.swing.JDialog {
     private javax.swing.JButton Confirm;
     private javax.swing.JTextField accountnumber;
     private javax.swing.JButton back;
-    private javax.swing.JTextField balance;
     private javax.swing.JButton cancel;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
-    private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField lasttransaction;
-    private javax.swing.JTextField name;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
     // End of variables declaration//GEN-END:variables
 }

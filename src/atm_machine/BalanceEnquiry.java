@@ -4,6 +4,7 @@
  */
 package atm_machine;
 
+import java.awt.event.ActionEvent;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
@@ -34,7 +35,8 @@ public class BalanceEnquiry extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
         cancel = new javax.swing.JButton();
@@ -48,7 +50,6 @@ public class BalanceEnquiry extends javax.swing.JDialog {
         accountbalance = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
 
@@ -78,14 +79,13 @@ public class BalanceEnquiry extends javax.swing.JDialog {
         yourpin.setFont(new java.awt.Font("Segoe UI", 0, 22)); // NOI18N
         yourpin.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                accountbalance1ActionPerformed(evt);
+                yourpinActionPerformed(evt);
             }
         });
         getContentPane().add(yourpin, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 340, 160, 50));
 
         Confirm.setBackground(new java.awt.Color(0, 0, 0));
-        Confirm.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
+        Confirm.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
         Confirm.setBorder(null);
         Confirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -94,8 +94,7 @@ public class BalanceEnquiry extends javax.swing.JDialog {
         });
         getContentPane().add(Confirm, new org.netbeans.lib.awtextra.AbsoluteConstraints(560, 662, 180, -1));
 
-        back.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
         back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -118,23 +117,18 @@ public class BalanceEnquiry extends javax.swing.JDialog {
                 accountbalanceActionPerformed(evt);
             }
         });
-        getContentPane().add(accountbalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 480, 330, 50));
+        getContentPane().add(accountbalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 480, 230, 50));
 
-        jLabel4.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\src\\atm_machine\\coverfourth.jpg")); // NOI18N
+        jLabel4.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\src\\atm_machine\\coverfourth.jpg")); // NOI18N
         getContentPane().add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 150, 750, 580));
 
         jLabel6.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverthird1.jpg"))); // NOI18N
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 10, 810, 540));
 
-        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverthird1.jpg"))); // NOI18N
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 130, 810, 530));
-
         jLabel9.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverthird1.jpg"))); // NOI18N
         getContentPane().add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 800, 530));
 
-        jLabel7.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Third.png")); // NOI18N
+        jLabel7.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Third.png")); // NOI18N
         getContentPane().add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1220, 830));
 
         pack();
@@ -245,7 +239,6 @@ public class BalanceEnquiry extends javax.swing.JDialog {
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
-    private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JTextField yourpin;
     // End of variables declaration//GEN-END:variables

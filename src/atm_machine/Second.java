@@ -35,12 +35,9 @@ public class Second extends javax.swing.JDialog {
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        balance = new javax.swing.JTextField();
-        lasttransaction = new javax.swing.JTextField();
-        name = new javax.swing.JTextField();
         ministatement = new javax.swing.JButton();
         fastcash = new javax.swing.JButton();
         withdrawal = new javax.swing.JButton();
@@ -49,33 +46,13 @@ public class Second extends javax.swing.JDialog {
         balanceenqury = new javax.swing.JButton();
         back = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
-        jLabel1 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        balance.setBackground(new java.awt.Color(0, 0, 0));
-        balance.setForeground(new java.awt.Color(255, 255, 255));
-        balance.setBorder(null);
-        balance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                balanceActionPerformed(evt);
-            }
-        });
-        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 390, 168, 49));
-
-        lasttransaction.setBackground(new java.awt.Color(0, 0, 0));
-        lasttransaction.setForeground(new java.awt.Color(255, 255, 255));
-        lasttransaction.setBorder(null);
-        getContentPane().add(lasttransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 500, 168, 49));
-
-        name.setBackground(new java.awt.Color(0, 0, 0));
-        name.setForeground(new java.awt.Color(255, 255, 255));
-        name.setBorder(null);
-        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(10, 280, 180, 49));
-
-        ministatement.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\ministatement.png")); // NOI18N
+        ministatement.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\ministatement.png")); // NOI18N
         ministatement.setBorder(null);
         ministatement.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -84,8 +61,7 @@ public class Second extends javax.swing.JDialog {
         });
         getContentPane().add(ministatement, new org.netbeans.lib.awtextra.AbsoluteConstraints(890, 460, 280, 210));
 
-        fastcash.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\fastcash.png")); // NOI18N
+        fastcash.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\fastcash.png")); // NOI18N
         fastcash.setBorder(null);
         fastcash.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -119,7 +95,7 @@ public class Second extends javax.swing.JDialog {
                 fundtransferActionPerformed(evt);
             }
         });
-        getContentPane().add(fundtransfer, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 450, 290, 210));
+        getContentPane().add(fundtransfer, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 460, 290, 210));
 
         balanceenqury.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/balanceenqury.png"))); // NOI18N
         balanceenqury.setBorder(null);
@@ -130,15 +106,14 @@ public class Second extends javax.swing.JDialog {
         });
         getContentPane().add(balanceenqury, new org.netbeans.lib.awtextra.AbsoluteConstraints(570, 460, 280, 210));
 
-        back.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
         back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 710, 150, 32));
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1010, 710, 150, 40));
 
         cancel.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/cancel.png"))); // NOI18N
         cancel.setBorder(null);
@@ -149,9 +124,14 @@ public class Second extends javax.swing.JDialog {
         });
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 770, 140, 40));
 
-        jLabel1.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Dashboard.png")); // NOI18N
-        getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1200, 830));
+        jLabel8.setBackground(new java.awt.Color(0, 0, 0));
+        jLabel8.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel8.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 210, 650));
+
+        jLabel2.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Dashboard.png")); // NOI18N
+        jLabel2.setText("jLabel2");
+        getContentPane().add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1190, 830));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -248,15 +228,13 @@ public class Second extends javax.swing.JDialog {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton back;
-    private javax.swing.JTextField balance;
     private javax.swing.JButton balanceenqury;
     private javax.swing.JButton cancel;
     private javax.swing.JButton fastcash;
     private javax.swing.JButton fundtransfer;
-    private javax.swing.JLabel jLabel1;
-    private javax.swing.JTextField lasttransaction;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JButton ministatement;
-    private javax.swing.JTextField name;
     private javax.swing.JButton pinchange;
     private javax.swing.JButton withdrawal;
     // End of variables declaration//GEN-END:variables

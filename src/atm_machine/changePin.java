@@ -33,12 +33,9 @@ public class changePin extends javax.swing.JDialog {
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated
     // <editor-fold defaultstate="collapsed" desc="Generated
-    // Code">//GEN-BEGIN:initComponents
+    // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        name = new javax.swing.JTextField();
-        balance = new javax.swing.JTextField();
-        lasttransaction = new javax.swing.JTextField();
         Confirm = new javax.swing.JButton();
         cancel = new javax.swing.JButton();
         back = new javax.swing.JButton();
@@ -49,40 +46,13 @@ public class changePin extends javax.swing.JDialog {
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         getContentPane().setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        name.setBackground(new java.awt.Color(0, 0, 0));
-        name.setForeground(new java.awt.Color(255, 255, 255));
-        name.setBorder(null);
-        name.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                nameActionPerformed(evt);
-            }
-
-            private void nameActionPerformed(ActionEvent evt) {
-            }
-        });
-        getContentPane().add(name, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 280, 180, 40));
-
-        balance.setBackground(new java.awt.Color(0, 0, 0));
-        balance.setForeground(new java.awt.Color(255, 255, 255));
-        balance.setBorder(null);
-        balance.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                balanceActionPerformed(evt);
-            }
-        });
-        getContentPane().add(balance, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 390, 168, 40));
-
-        lasttransaction.setBackground(new java.awt.Color(0, 0, 0));
-        lasttransaction.setForeground(new java.awt.Color(255, 255, 255));
-        lasttransaction.setBorder(null);
-        getContentPane().add(lasttransaction, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 500, 168, 40));
-
-        Confirm.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
+        Confirm.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\confirm.png")); // NOI18N
         Confirm.setBorder(null);
         Confirm.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -99,19 +69,16 @@ public class changePin extends javax.swing.JDialog {
                 cancelActionPerformed(evt);
             }
         });
-        oldpin.setFont(new java.awt.Font("Segoe UI", 0, 25));
-        newpin.setFont(new java.awt.Font("Segoe UI", 0, 25));
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, 180, 40));
 
-        back.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
+        back.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\back.png")); // NOI18N
         back.setBorder(null);
         back.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 backActionPerformed(evt);
             }
         });
-        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 770, 140, 32));
+        getContentPane().add(back, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 770, 140, 40));
 
         jLabel2.setFont(new java.awt.Font("Segoe UI Semibold", 0, 24)); // NOI18N
         jLabel2.setForeground(new java.awt.Color(255, 255, 255));
@@ -130,14 +97,17 @@ public class changePin extends javax.swing.JDialog {
         jLabel5.setText("Change PIN ");
         getContentPane().add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(580, 140, 260, -1));
 
-        jLabel6.setIcon(new javax.swing.ImageIcon(
-                "C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
+        jLabel6.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\coverthird1.jpg")); // NOI18N
         jLabel6.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
         getContentPane().add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 110, 670, 480));
-
-        jLabel1.setIcon(
-                new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Third.png")); // NOI18N
         getContentPane().add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, -1));
+
+        jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/atm_machine/coverthird1.jpg"))); // NOI18N
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 220, 580));
+
+        jLabel3.setIcon(new javax.swing.ImageIcon("C:\\Users\\91975\\OneDrive\\Desktop\\MY_WORK\\ATM_Machine\\img\\Third.png")); // NOI18N
+        jLabel3.setText("jLabel3");
+        getContentPane().add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 0, 1210, -1));
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -233,15 +203,14 @@ public class changePin extends javax.swing.JDialog {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton Confirm;
     private javax.swing.JButton back;
-    private javax.swing.JTextField balance;
     private javax.swing.JButton cancel;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private javax.swing.JTextField lasttransaction;
-    private javax.swing.JTextField name;
+    private javax.swing.JLabel jLabel8;
     private javax.swing.JTextField newpin;
     private javax.swing.JTextField oldpin;
     // End of variables declaration//GEN-END:variables
