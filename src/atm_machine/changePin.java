@@ -5,6 +5,11 @@
 package atm_machine;
 
 import java.awt.event.ActionEvent;
+import java.sql.*;
+
+import javax.swing.JOptionPane;
+
+import com.mysql.cj.xdevapi.Statement;
 
 /**
  *
@@ -94,6 +99,8 @@ public class changePin extends javax.swing.JDialog {
                 cancelActionPerformed(evt);
             }
         });
+        oldpin.setFont(new java.awt.Font("Segoe UI", 0, 25));
+        newpin.setFont(new java.awt.Font("Segoe UI", 0, 25));
         getContentPane().add(cancel, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 770, 180, 40));
 
         back.setIcon(
@@ -140,7 +147,31 @@ public class changePin extends javax.swing.JDialog {
     }// GEN-LAST:event_balanceActionPerformed
 
     private void ConfirmActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_ConfirmActionPerformed
-        // TODO add your handling code here:
+
+        int value1 = Integer.parseInt(oldpin.getText());
+        int value = Integer.parseInt(newpin.getText());
+        if (oldpin.getText().length() <= 0 || newpin.getText().length() <= 0) {
+            JOptionPane.showMessageDialog(null, " PLEASE ENTER BOTH PIN'S PROPERLY");
+        } else {
+            try {
+                Connection con = DriverManager.getConnection(
+                        "jdbc:mysql://localhost:3306/atm",
+                        "root", "2412");
+                java.sql.Statement statement = con.createStatement();
+                String sql = "UPDATE CARD set CARD_PIN = " + value + " where CARD_PIN= " + value1;
+                statement.executeUpdate(sql);
+                statement.close();
+                con.close();
+
+                JOptionPane.showMessageDialog(null, "Update Successfull");
+                con.close();
+
+            } catch (Exception e) {
+                JOptionPane.showMessageDialog(null, e, null, 0);
+            }
+        }
+        oldpin.setText(null);
+        newpin.setText(null);
     }// GEN-LAST:event_ConfirmActionPerformed
 
     private void cancelActionPerformed(java.awt.event.ActionEvent evt) {// GEN-FIRST:event_cancelActionPerformed
